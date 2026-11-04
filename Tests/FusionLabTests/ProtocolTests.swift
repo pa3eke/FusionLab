@@ -126,9 +126,31 @@ func XCTAssertThrowsError<T>(_ expression:@autoclosure () throws -> T,file:Stati
  @MainActor static func main() async {
   let suite=ProtocolTests()
   do {
+   suite.testRadioLCDPresentationAndMeter()
+   try await suite.testRenderedRadioLCD()
+   try suite.testReceiveMuteAndXKeys()
+   suite.testReceiveMuteOutputGain()
+   suite.testXKeysReportsAndPTTRequests()
+   try suite.testXKeysControllerAndStorage()
+   try await suite.testXKeysCentralPTTLifecycle()
+   try await suite.testNXDNCallsignLookupAndDisplay()
+   try suite.testNXDNWireAndClock()
+   try await suite.testNXDNHostsAndPresets()
+   try await suite.testNXDNLocalAudioAndModeSwitch()
    suite.testMicrophoneGainAndClipping()
    suite.testReceiveAGC()
    suite.testReceiveEQ()
+   try suite.testQuickPresetStorage()
+   try await suite.testPasswordRestoreDoesNotBlockStartup()
+   suite.testDMRQuickSelection()
+   try await suite.testLiveReflectorQuickSwitch()
+   try suite.testFusionMD380BitOrder()
+   suite.testMD380FEC()
+   try suite.testLocalMD380Codec()
+   try await suite.testLocalMD380Protocol()
+   try await suite.testMD380RadioSession()
+   try await suite.testBrandMeisterHeartbeatWithoutUI()
+   suite.testBoundedActivityLog()
    try await suite.testDMRCallsignLookupAndDisplay()
    try suite.testDMRWireAndReferenceFrames()
    suite.testBrandMeisterHandshakeAndTimeout()
@@ -137,6 +159,7 @@ func XCTAssertThrowsError<T>(_ expression:@autoclosure () throws -> T,file:Stati
    try await suite.testLocalBrandMeisterAudioAndModeSwitch()
    try await suite.testRenderedPTTSize()
    try suite.testPTTKeyModesAndDeadline()
+   try suite.testSelectedTransmitLimits()
    try await suite.testGlobalPTTLifecycle()
    suite.testYSFHostParsingAndSearch()
    try await suite.testYSFHostCacheRefreshAndSelection()
@@ -153,7 +176,7 @@ func XCTAssertThrowsError<T>(_ expression:@autoclosure () throws -> T,file:Stati
    try await suite.testLocalEndToEndHandshakeAndReceive()
    try await suite.testLocalPTTAndPermissionFailures()
   }catch{failures.append(error.localizedDescription)}
-  if failures.isEmpty {print("PASS: Fusion and DMR reference vectors, BrandMeister authentication/RX/TX/mode switch, receive filtering, PCM, FICH, local UDP, PTT hold/toggle, 180s deadline, microphone permission, pacing, padding and timeout")}
+  if failures.isEmpty {print("PASS: LCD presentation/dBFS/native rendering, XK-24 parsing/edges/storage/LEDs, central PTT ownership/USB loss/reconnect/inhibition/emergency, Fusion, DMR and NXDN reference vectors, NXDN host cache/presets, NXDN RX/TX/80ms timing and both vocoders, BrandMeister authentication/RX/TX/mode switch, receive filtering, PCM, FICH, local UDP, PTT hold/toggle, 180s deadline, microphone permission, pacing, padding and timeout")}
   else {failures.forEach{print("FAIL: \($0)")};exit(1)}
  }
 }

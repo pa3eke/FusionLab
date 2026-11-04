@@ -13,7 +13,7 @@ struct PTTButton:NSViewRepresentable {
   return button
  }
  func sizeThatFits(_ proposal:ProposedViewSize,nsView:TrackingPTTButton,context:Context)->CGSize? {
-  CGSize(width:proposal.width ?? 165,height:48)
+  CGSize(width:proposal.width ?? 165,height:proposal.height ?? 48)
  }
  func updateNSView(_ button:TrackingPTTButton,context:Context){
   // Audio meters/counters publish frequently. Do not invalidate the native
@@ -46,10 +46,13 @@ final class TrackingPTTButton:NSButton {
 final class PTTButtonCell:NSButtonCell {
  override func drawBezel(withFrame frame:NSRect,in controlView:NSView){
   let transmitting=(controlView as? TrackingPTTButton)?.transmitting ?? false
-  var fill:NSColor=transmitting ? .systemRed:isEnabled ? .controlAccentColor:.disabledControlTextColor
+  var fill:NSColor=transmitting ? .systemRed:isEnabled ? NSColor(white:0.12,alpha:1):NSColor(white:0.09,alpha:1)
   if isHighlighted {fill=fill.blended(withFraction:0.15,of:.black) ?? fill}
   fill.setFill()
-  NSBezierPath(roundedRect:frame.insetBy(dx:1,dy:1),xRadius:8,yRadius:8).fill()
+  let bezel=NSBezierPath(roundedRect:frame.insetBy(dx:1,dy:1),xRadius:8,yRadius:8)
+  bezel.fill()
+  (transmitting ? NSColor.systemRed:isEnabled ? NSColor.systemOrange:NSColor.darkGray).setStroke()
+  bezel.lineWidth=2;bezel.stroke()
  }
  override func drawInterior(withFrame frame:NSRect,in controlView:NSView){
   let style=NSMutableParagraphStyle();style.alignment = .center

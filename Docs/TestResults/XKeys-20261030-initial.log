@@ -1,0 +1,159 @@
+HID Uit
+STATE TX false ready false focus nl.pa3eke.FusionLab.XKeysTest
+TEST ONLY: synthetic microphone, AMBE and reflector bound to127.0.0.1. No public-network transmission.
+HID XK-24 aangesloten · descriptor controleren…
+KEY — pressed [] TX false focus nl.pa3eke.FusionLab.XKeysTest minimized false seen []
+STATE TX false ready false focus nl.pa3eke.FusionLab.XKeysTest
+STATE TX false ready false focus nl.pa3eke.FusionLab.XKeysTest
+STATE TX false ready false focus nl.pa3eke.FusionLab.XKeysTest
+HID Verbonden · directe HID-invoer gereed
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+STATE TX false ready true focus com.openai.codex
+STATE TX false ready true focus com.openai.codex
+STATE TX false ready true focus com.openai.codex
+STATE TX false ready true focus com.openai.codex
+STATE TX false ready true focus com.openai.codex
+KEY 1 pressed [1] TX true focus com.openai.codex minimized false seen [1]
+STATE TX true ready true focus com.openai.codex
+KEY 1 pressed [] TX true focus com.openai.codex minimized false seen [1]
+STATE TX false ready true focus com.openai.codex
+KEY 1 pressed [1] TX true focus com.openai.codex minimized false seen [1]
+STATE TX true ready true focus com.openai.codex
+KEY 1 pressed [] TX true focus com.openai.codex minimized false seen [1]
+STATE TX false ready true focus com.openai.codex
+STATE TX false ready true focus com.openai.codex
+STATE TX false ready true focus com.openai.codex
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+KEY 1 pressed [1] TX true focus nl.pa3eke.FusionLab.XKeysTest minimized false seen [1]
+STATE TX true ready true focus nl.pa3eke.FusionLab.XKeysTest
+KEY 1 pressed [] TX true focus nl.pa3eke.FusionLab.XKeysTest minimized false seen [1]
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+KEY 1 pressed [1] TX true focus nl.pa3eke.FusionLab.XKeysTest minimized false seen [1]
+STATE TX true ready true focus nl.pa3eke.FusionLab.XKeysTest
+KEY 1 pressed [] TX true focus nl.pa3eke.FusionLab.XKeysTest minimized false seen [1]
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+KEY 1 pressed [1] TX true focus nl.pa3eke.FusionLab.XKeysTest minimized false seen [1]
+STATE TX true ready true focus nl.pa3eke.FusionLab.XKeysTest
+STATE TX true ready true focus nl.pa3eke.FusionLab.XKeysTest
+KEY 1 pressed [] TX true focus nl.pa3eke.FusionLab.XKeysTest minimized false seen [1]
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+KEY 1 pressed [1] TX true focus nl.pa3eke.FusionLab.XKeysTest minimized false seen [1]
+STATE TX true ready true focus nl.pa3eke.FusionLab.XKeysTest
+KEY 1 pressed [] TX true focus nl.pa3eke.FusionLab.XKeysTest minimized false seen [1]
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+KEY 1 pressed [1] TX true focus nl.pa3eke.FusionLab.XKeysTest minimized false seen [1]
+STATE TX true ready true focus nl.pa3eke.FusionLab.XKeysTest
+KEY 1 pressed [] TX true focus nl.pa3eke.FusionLab.XKeysTest minimized false seen [1]
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+KEY 1 pressed [1] TX true focus nl.pa3eke.FusionLab.XKeysTest minimized false seen [1]
+STATE TX true ready true focus nl.pa3eke.FusionLab.XKeysTest
+KEY 1 pressed [] TX true focus nl.pa3eke.FusionLab.XKeysTest minimized false seen [1]
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+KEY 1 pressed [1] TX true focus nl.pa3eke.FusionLab.XKeysTest minimized false seen [1]
+STATE TX true ready true focus nl.pa3eke.FusionLab.XKeysTest
+KEY 1 pressed [] TX true focus nl.pa3eke.FusionLab.XKeysTest minimized false seen [1]
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+KEY 7 pressed [7] TX false focus nl.pa3eke.FusionLab.XKeysTest minimized false seen [1, 7]
+KEY 7 pressed [] TX false focus nl.pa3eke.FusionLab.XKeysTest minimized false seen [1, 7]
+KEY 7 pressed [7] TX false focus nl.pa3eke.FusionLab.XKeysTest minimized false seen [1, 7]
+KEY 7 pressed [] TX false focus nl.pa3eke.FusionLab.XKeysTest minimized false seen [1, 7]
+KEY 1 pressed [1] TX true focus nl.pa3eke.FusionLab.XKeysTest minimized false seen [1, 7]
+STATE TX true ready true focus nl.pa3eke.FusionLab.XKeysTest
+KEY 1 pressed [] TX true focus nl.pa3eke.FusionLab.XKeysTest minimized false seen [1, 7]
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+KEY 7 pressed [7] TX false focus nl.pa3eke.FusionLab.XKeysTest minimized false seen [1, 7]
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+KEY 7 pressed [] TX false focus nl.pa3eke.FusionLab.XKeysTest minimized false seen [1, 7]
+KEY 7 pressed [7] TX false focus nl.pa3eke.FusionLab.XKeysTest minimized false seen [1, 7]
+KEY 7 pressed [] TX false focus nl.pa3eke.FusionLab.XKeysTest minimized false seen [1, 7]
+KEY 7 pressed [7] TX false focus nl.pa3eke.FusionLab.XKeysTest minimized false seen [1, 7]
+KEY 7 pressed [] TX false focus nl.pa3eke.FusionLab.XKeysTest minimized false seen [1, 7]
+KEY 7 pressed [7] TX false focus nl.pa3eke.FusionLab.XKeysTest minimized false seen [1, 7]
+KEY 7 pressed [] TX false focus nl.pa3eke.FusionLab.XKeysTest minimized false seen [1, 7]
+KEY 2 pressed [2] TX true focus nl.pa3eke.FusionLab.XKeysTest minimized false seen [1, 2, 7]
+STATE TX true ready true focus nl.pa3eke.FusionLab.XKeysTest
+KEY 2 pressed [] TX true focus nl.pa3eke.FusionLab.XKeysTest minimized false seen [1, 2, 7]
+STATE TX true ready true focus nl.pa3eke.FusionLab.XKeysTest
+KEY 2 pressed [2] TX true focus nl.pa3eke.FusionLab.XKeysTest minimized false seen [1, 2, 7]
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+KEY 2 pressed [] TX false focus nl.pa3eke.FusionLab.XKeysTest minimized false seen [1, 2, 7]
+KEY 2 pressed [2] TX true focus nl.pa3eke.FusionLab.XKeysTest minimized false seen [1, 2, 7]
+STATE TX true ready true focus nl.pa3eke.FusionLab.XKeysTest
+KEY 2 pressed [] TX true focus nl.pa3eke.FusionLab.XKeysTest minimized false seen [1, 2, 7]
+KEY 2 pressed [2] TX true focus nl.pa3eke.FusionLab.XKeysTest minimized false seen [1, 2, 7]
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+KEY 2 pressed [] TX false focus nl.pa3eke.FusionLab.XKeysTest minimized false seen [1, 2, 7]
+KEY 2 pressed [2] TX true focus nl.pa3eke.FusionLab.XKeysTest minimized false seen [1, 2, 7]
+STATE TX true ready true focus nl.pa3eke.FusionLab.XKeysTest
+KEY 2 pressed [] TX true focus nl.pa3eke.FusionLab.XKeysTest minimized false seen [1, 2, 7]
+KEY 2 pressed [2] TX true focus nl.pa3eke.FusionLab.XKeysTest minimized false seen [1, 2, 7]
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+KEY 2 pressed [] TX false focus nl.pa3eke.FusionLab.XKeysTest minimized false seen [1, 2, 7]
+KEY 2 pressed [2] TX true focus nl.pa3eke.FusionLab.XKeysTest minimized false seen [1, 2, 7]
+STATE TX true ready true focus nl.pa3eke.FusionLab.XKeysTest
+KEY 2 pressed [] TX true focus nl.pa3eke.FusionLab.XKeysTest minimized false seen [1, 2, 7]
+STATE TX true ready true focus nl.pa3eke.FusionLab.XKeysTest
+KEY 2 pressed [2] TX true focus nl.pa3eke.FusionLab.XKeysTest minimized false seen [1, 2, 7]
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+KEY 2 pressed [] TX false focus nl.pa3eke.FusionLab.XKeysTest minimized false seen [1, 2, 7]
+KEY 2 pressed [2] TX true focus nl.pa3eke.FusionLab.XKeysTest minimized false seen [1, 2, 7]
+STATE TX true ready true focus nl.pa3eke.FusionLab.XKeysTest
+KEY 2 pressed [] TX true focus nl.pa3eke.FusionLab.XKeysTest minimized false seen [1, 2, 7]
+KEY 1 pressed [1] TX true focus nl.pa3eke.FusionLab.XKeysTest minimized false seen [1, 2, 7]
+KEY 1 pressed [] TX true focus nl.pa3eke.FusionLab.XKeysTest minimized false seen [1, 2, 7]
+KEY 1 pressed [1] TX true focus nl.pa3eke.FusionLab.XKeysTest minimized false seen [1, 2, 7]
+KEY 1 pressed [] TX true focus nl.pa3eke.FusionLab.XKeysTest minimized false seen [1, 2, 7]
+KEY 1 pressed [1] TX true focus nl.pa3eke.FusionLab.XKeysTest minimized false seen [1, 2, 7]
+KEY 1 pressed [] TX true focus nl.pa3eke.FusionLab.XKeysTest minimized false seen [1, 2, 7]
+KEY 2 pressed [2] TX true focus nl.pa3eke.FusionLab.XKeysTest minimized false seen [1, 2, 7]
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+KEY 2 pressed [] TX false focus nl.pa3eke.FusionLab.XKeysTest minimized false seen [1, 2, 7]
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+KEY 1 pressed [1] TX true focus nl.pa3eke.FusionLab.XKeysTest minimized false seen [1, 2, 7]
+STATE TX true ready true focus nl.pa3eke.FusionLab.XKeysTest
+KEY 1 pressed [] TX true focus nl.pa3eke.FusionLab.XKeysTest minimized false seen [1, 2, 7]
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+KEY 1 pressed [1] TX true focus nl.pa3eke.FusionLab.XKeysTest minimized false seen [1, 2, 7]
+STATE TX true ready true focus nl.pa3eke.FusionLab.XKeysTest
+KEY 1 pressed [] TX true focus nl.pa3eke.FusionLab.XKeysTest minimized false seen [1, 2, 7]
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+STATE TX false ready true focus com.openai.codex
+STATE TX false ready true focus com.openai.codex
+STATE TX false ready true focus com.openai.codex
+STATE TX false ready true focus com.openai.codex
+STATE TX false ready true focus com.openai.codex
+STATE TX false ready true focus com.openai.codex
+STATE TX false ready true focus com.openai.codex
+HID Niet verbonden
+HID Niet verbonden
+STATE TX false ready false focus com.openai.codex
+STATE TX false ready false focus com.openai.codex

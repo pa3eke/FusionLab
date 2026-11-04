@@ -8,6 +8,35 @@ final class StubPTTKey:PTTKeyRegistration {
 }
 
 extension ProtocolTests {
+ func testSelectedTransmitLimits() throws {
+  let dmr=DMRVoiceSettings(source:2040001,destination:9990,peer:2040001,slot:2,colorCode:1,privateCall:true)
+  let base=Date(timeIntervalSince1970:1000)
+  for profile in [VoiceProfile.fusion,.dmr(dmr),.nxdn(NXDNVoiceSettings(source:41007,destination:204,ran:1))] {
+   for limit in TransmitLimit.allCases {
+    let tx=FusionTransmitter()
+    var wire=[Data](),inputs=0
+    tx.onNetwork={wire.append($0)};tx.onAMBE={_ in inputs += 1}
+    tx.start(call:"PA0TEST",profile:profile,limit:limit,now:base,uptime:1000)
+    XCTAssertEqual(tx.remainingSeconds(at:1000),limit.rawValue)
+    tx.append(Array(repeating:0.1,count:160));tx.tick(now:base,uptime:1000)
+    // A second start must not extend an already active two-minute stream.
+    tx.start(call:"PA0TEST",profile:profile,limit:.threeMinutes,now:base,uptime:1100)
+    let end=1000+Double(limit.rawValue)
+    XCTAssertEqual(tx.remainingSeconds(at:end-10),10)
+    tx.stop(now:base)
+    tx.tick(now:base,uptime:end-0.001)
+    XCTAssertEqual(tx.phase,.draining);XCTAssertEqual(tx.remainingSeconds(at:end-0.001),1)
+    let before=inputs
+    tx.tick(now:base.addingTimeInterval(-86400),uptime:end)
+    XCTAssertEqual(tx.phase,.idle);XCTAssertEqual(tx.timedOut,true)
+    XCTAssertEqual(tx.remainingSeconds(at:end),0);XCTAssertEqual(inputs,before)
+    XCTAssertEqual(wire.count,2,"Deadline sends one header and one terminator, no late buffered audio")
+    if case .fusion=profile {XCTAssertEqual(try wire.map{try Packets.receive($0).fi},[0,2])}
+    else if case .dmr=profile {XCTAssertEqual(wire.compactMap{DMRPackets.receive($0)?.kind},[0,2])}
+    else {XCTAssertEqual(wire.compactMap{NXDNPackets.receive($0)?.kind},[0,2])}
+   }
+  }
+ }
  func testPTTKeyModesAndDeadline() throws {
   var key=PTTKeyState()
   XCTAssertEqual(key.event(pressed:true,mode:.hold,canStart:true,engaged:false),.start)

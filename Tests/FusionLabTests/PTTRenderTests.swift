@@ -40,6 +40,16 @@ extension ProtocolTests {
     XCTAssertEqual(color.redComponent>color.greenComponent+0.2 && color.redComponent>color.blueComponent+0.2,true,"Red background must cover the full button height on every cell redraw")
    }
   }
+  // The transceiver panel gives the same native tracking button a taller
+  // frame. Verify the entire clickable control follows that proposal.
+  host.rootView=PTTButton(title:"PTT · Zenden",enabled:true,transmitting:false,onPress:{},onRelease:{}).frame(width:145,height:86)
+  window.setContentSize(NSSize(width:145,height:86))
+  host.frame=NSRect(x:0,y:0,width:145,height:86)
+  host.layoutSubtreeIfNeeded()
+  try await Task.sleep(nanoseconds:20_000_000)
+  host.layoutSubtreeIfNeeded()
+  XCTAssertEqual(findButton(host)?.bounds.height,CGFloat(86),"The transceiver PTT must fill its taller clickable frame")
+  XCTAssertEqual(findButton(host)?.bounds.width,CGFloat(145))
   try render().representation(using:.png,properties:[:])!.write(to:URL(fileURLWithPath:"/private/tmp/FusionLab-PTT-render.png"))
  }
 }

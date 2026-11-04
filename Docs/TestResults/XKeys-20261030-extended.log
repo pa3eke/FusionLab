@@ -1,0 +1,424 @@
+HID Niet verbonden
+STATE TX false ready false focus nl.pa3eke.FusionLab.XKeysTest
+TEST ONLY: synthetic microphone, AMBE and reflector bound to127.0.0.1. No public-network transmission.
+HID XK-24 aangesloten · descriptor controleren…
+KEY — pressed [] TX false focus nl.pa3eke.FusionLab.XKeysTest minimized false onActiveSpace true seen []
+STATE TX false ready false focus nl.pa3eke.FusionLab.XKeysTest
+STATE TX false ready false focus nl.pa3eke.FusionLab.XKeysTest
+STATE TX false ready false focus nl.pa3eke.FusionLab.XKeysTest
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+HID Verbonden · directe HID-invoer gereed
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+KEY 1 pressed [1] TX true focus nl.pa3eke.FusionLab.XKeysTest minimized false onActiveSpace true seen [1]
+STATE TX true ready true focus nl.pa3eke.FusionLab.XKeysTest
+KEY 1 pressed [] TX true focus nl.pa3eke.FusionLab.XKeysTest minimized false onActiveSpace true seen [1]
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+KEY 1 pressed [1] TX true focus com.google.Chrome minimized false onActiveSpace true seen [1]
+STATE TX true ready true focus com.google.Chrome
+KEY 1 pressed [] TX true focus com.google.Chrome minimized false onActiveSpace true seen [1]
+STATE TX false ready true focus com.google.Chrome
+STATE TX false ready true focus com.google.Chrome
+KEY 1 pressed [1] TX true focus com.google.Chrome minimized false onActiveSpace true seen [1]
+STATE TX true ready true focus com.google.Chrome
+KEY 1 pressed [] TX true focus com.google.Chrome minimized false onActiveSpace true seen [1]
+STATE TX false ready true focus com.google.Chrome
+KEY 1 pressed [1] TX true focus com.google.Chrome minimized false onActiveSpace true seen [1]
+STATE TX true ready true focus com.google.Chrome
+STATE TX true ready true focus com.google.Chrome
+KEY 1 pressed [] TX true focus com.google.Chrome minimized false onActiveSpace true seen [1]
+STATE TX false ready true focus com.google.Chrome
+KEY 2 pressed [2] TX true focus com.google.Chrome minimized false onActiveSpace true seen [1, 2]
+STATE TX true ready true focus com.google.Chrome
+KEY 2 pressed [] TX true focus com.google.Chrome minimized false onActiveSpace true seen [1, 2]
+KEY 2 pressed [2] TX true focus com.google.Chrome minimized false onActiveSpace true seen [1, 2]
+STATE TX false ready true focus com.google.Chrome
+KEY 2 pressed [] TX false focus com.google.Chrome minimized false onActiveSpace true seen [1, 2]
+KEY 3 pressed [3] TX false focus com.google.Chrome minimized false onActiveSpace true seen [1, 2, 3]
+KEY 3 pressed [] TX false focus com.google.Chrome minimized false onActiveSpace true seen [1, 2, 3]
+KEY 3 pressed [3] TX false focus com.google.Chrome minimized false onActiveSpace true seen [1, 2, 3]
+KEY 3 pressed [] TX false focus com.google.Chrome minimized false onActiveSpace true seen [1, 2, 3]
+KEY 3 pressed [3] TX false focus com.google.Chrome minimized false onActiveSpace true seen [1, 2, 3]
+STATE TX false ready true focus com.google.Chrome
+KEY 3 pressed [] TX false focus com.google.Chrome minimized false onActiveSpace true seen [1, 2, 3]
+KEY 2 pressed [2] TX true focus com.google.Chrome minimized false onActiveSpace true seen [1, 2, 3]
+STATE TX true ready true focus com.google.Chrome
+KEY 2 pressed [] TX true focus com.google.Chrome minimized false onActiveSpace true seen [1, 2, 3]
+KEY 2 pressed [2] TX true focus com.google.Chrome minimized false onActiveSpace true seen [1, 2, 3]
+STATE TX false ready true focus com.google.Chrome
+KEY 2 pressed [] TX false focus com.google.Chrome minimized false onActiveSpace true seen [1, 2, 3]
+KEY 1 pressed [1] TX true focus com.google.Chrome minimized false onActiveSpace true seen [1, 2, 3]
+STATE TX true ready true focus com.google.Chrome
+KEY 1 pressed [] TX true focus com.google.Chrome minimized false onActiveSpace true seen [1, 2, 3]
+STATE TX false ready true focus com.google.Chrome
+KEY 1 pressed [1] TX true focus com.google.Chrome minimized false onActiveSpace true seen [1, 2, 3]
+STATE TX true ready true focus com.google.Chrome
+KEY 1 pressed [] TX true focus com.google.Chrome minimized false onActiveSpace true seen [1, 2, 3]
+STATE TX false ready true focus com.google.Chrome
+KEY 1 pressed [1] TX true focus com.google.Chrome minimized false onActiveSpace true seen [1, 2, 3]
+STATE TX true ready true focus com.google.Chrome
+KEY 1 pressed [] TX true focus com.google.Chrome minimized false onActiveSpace true seen [1, 2, 3]
+STATE TX false ready true focus com.google.Chrome
+STATE TX false ready true focus com.google.Chrome
+KEY 2 pressed [2] TX true focus com.google.Chrome minimized false onActiveSpace true seen [1, 2, 3]
+STATE TX true ready true focus com.google.Chrome
+KEY 2 pressed [] TX true focus com.google.Chrome minimized false onActiveSpace true seen [1, 2, 3]
+KEY 2 pressed [2] TX true focus com.google.Chrome minimized false onActiveSpace true seen [1, 2, 3]
+STATE TX false ready true focus com.google.Chrome
+KEY 2 pressed [] TX false focus com.google.Chrome minimized false onActiveSpace true seen [1, 2, 3]
+KEY 8 pressed [8] TX false focus com.google.Chrome minimized false onActiveSpace true seen [1, 2, 3, 8]
+KEY 8 pressed [] TX false focus com.google.Chrome minimized false onActiveSpace true seen [1, 2, 3, 8]
+STATE TX false ready true focus com.google.Chrome
+STATE TX false ready true focus com.google.Chrome
+STATE TX false ready true focus com.google.Chrome
+STATE TX false ready true focus com.google.Chrome
+KEY 7 pressed [7] TX false focus com.google.Chrome minimized false onActiveSpace true seen [1, 2, 3, 7, 8]
+KEY 7 pressed [] TX false focus com.google.Chrome minimized false onActiveSpace true seen [1, 2, 3, 7, 8]
+KEY 8 pressed [8] TX false focus com.google.Chrome minimized false onActiveSpace true seen [1, 2, 3, 7, 8]
+KEY 8 pressed [] TX false focus com.google.Chrome minimized false onActiveSpace true seen [1, 2, 3, 7, 8]
+KEY 9 pressed [9] TX false focus com.google.Chrome minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 9 pressed [] TX false focus com.google.Chrome minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [3] TX false focus com.google.Chrome minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [] TX false focus com.google.Chrome minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 2 pressed [2] TX true focus com.google.Chrome minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+STATE TX true ready true focus com.google.Chrome
+KEY 2 pressed [] TX true focus com.google.Chrome minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+STATE TX true ready true focus com.google.Chrome
+KEY 2 pressed [2] TX true focus com.google.Chrome minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+STATE TX false ready true focus com.google.Chrome
+KEY 2 pressed [] TX false focus com.google.Chrome minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [3] TX false focus com.google.Chrome minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [] TX false focus com.google.Chrome minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [3] TX false focus com.google.Chrome minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [] TX false focus com.google.Chrome minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [3] TX false focus com.google.Chrome minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [] TX false focus com.google.Chrome minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [3] TX false focus com.google.Chrome minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [] TX false focus com.google.Chrome minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [3] TX false focus com.google.Chrome minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [] TX false focus com.google.Chrome minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 2 pressed [2] TX true focus com.google.Chrome minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+STATE TX true ready true focus com.google.Chrome
+KEY 2 pressed [] TX true focus com.google.Chrome minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+STATE TX true ready true focus com.google.Chrome
+KEY 3 pressed [3] TX true focus com.google.Chrome minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+STATE TX false ready true focus com.google.Chrome
+KEY 3 pressed [] TX false focus com.google.Chrome minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [3] TX false focus com.google.Chrome minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [] TX false focus com.google.Chrome minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [3] TX false focus com.google.Chrome minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [] TX false focus com.google.Chrome minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [3] TX false focus com.google.Chrome minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [] TX false focus com.google.Chrome minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+STATE TX false ready true focus com.google.Chrome
+STATE TX false ready true focus com.openai.codex
+STATE TX false ready true focus com.openai.codex
+KEY 3 pressed [3] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 2 pressed [2] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+STATE TX true ready true focus com.openai.codex
+KEY 2 pressed [] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+STATE TX true ready true focus com.openai.codex
+KEY 3 pressed [3] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+STATE TX false ready true focus com.openai.codex
+KEY 3 pressed [] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 2 pressed [2] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+STATE TX true ready true focus com.openai.codex
+KEY 2 pressed [] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 2 pressed [2] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+STATE TX false ready true focus com.openai.codex
+KEY 2 pressed [] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 2 pressed [2] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+STATE TX true ready true focus com.openai.codex
+KEY 2 pressed [] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [3] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+STATE TX false ready true focus com.openai.codex
+KEY 3 pressed [] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+STATE TX false ready true focus com.openai.codex
+KEY 2 pressed [2] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+STATE TX true ready true focus com.openai.codex
+KEY 2 pressed [] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 1 pressed [1] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 1 pressed [] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 1 pressed [1] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 1 pressed [] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 2 pressed [2] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+STATE TX false ready true focus com.openai.codex
+KEY 2 pressed [] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 2 pressed [2] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+STATE TX true ready true focus com.openai.codex
+KEY 2 pressed [] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 1 pressed [1] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 1 pressed [] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 1 pressed [1] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 1 pressed [] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 2 pressed [2] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+STATE TX false ready true focus com.openai.codex
+STATE TX false ready true focus com.openai.codex
+KEY 2 pressed [] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 2 pressed [2] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+STATE TX true ready true focus com.openai.codex
+KEY 2 pressed [] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 1 pressed [1] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 1 pressed [] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 2 pressed [2] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+STATE TX false ready true focus com.openai.codex
+KEY 2 pressed [] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 1 pressed [1] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+STATE TX true ready true focus com.openai.codex
+KEY 1 pressed [] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+STATE TX false ready true focus com.openai.codex
+KEY 1 pressed [1] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+STATE TX true ready true focus com.openai.codex
+KEY 1 pressed [] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+STATE TX false ready true focus com.openai.codex
+KEY 2 pressed [2] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+STATE TX true ready true focus com.openai.codex
+KEY 2 pressed [] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+STATE TX true ready true focus com.openai.codex
+KEY 3 pressed [3] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+STATE TX false ready true focus com.openai.codex
+KEY 3 pressed [] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [3] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 2 pressed [2] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+STATE TX true ready true focus com.openai.codex
+KEY 2 pressed [] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 1 pressed [1] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 1 pressed [] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 1 pressed [1] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 1 pressed [] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 2 pressed [2] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+STATE TX false ready true focus com.openai.codex
+KEY 2 pressed [] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+STATE TX false ready true focus com.openai.codex
+KEY 1 pressed [1] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+STATE TX true ready true focus com.openai.codex
+KEY 1 pressed [] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+STATE TX false ready true focus com.openai.codex
+KEY 1 pressed [1] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+STATE TX true ready true focus com.openai.codex
+KEY 1 pressed [] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+STATE TX false ready true focus com.openai.codex
+KEY 2 pressed [2] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+STATE TX true ready true focus com.openai.codex
+KEY 2 pressed [] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 2 pressed [2] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+STATE TX false ready true focus com.openai.codex
+KEY 2 pressed [] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 2 pressed [2] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+STATE TX true ready true focus com.openai.codex
+KEY 2 pressed [] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 2 pressed [2] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+STATE TX false ready true focus com.openai.codex
+KEY 2 pressed [] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 2 pressed [2] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+STATE TX true ready true focus com.openai.codex
+KEY 2 pressed [] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+STATE TX true ready true focus com.openai.codex
+KEY 1 pressed [1] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 1 pressed [] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 2 pressed [2] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+STATE TX false ready true focus com.openai.codex
+KEY 2 pressed [] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [3] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [3] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 2 pressed [2] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+STATE TX true ready true focus com.openai.codex
+KEY 2 pressed [] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 1 pressed [1] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 1 pressed [] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 2 pressed [2] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+STATE TX false ready true focus com.openai.codex
+KEY 2 pressed [] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [3] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+STATE TX false ready true focus com.openai.codex
+KEY 3 pressed [3] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [3] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+STATE TX false ready true focus com.openai.codex
+STATE TX false ready true focus com.openai.codex
+STATE TX false ready true focus com.openai.codex
+STATE TX false ready true focus com.openai.codex
+STATE TX false ready true focus com.openai.codex
+STATE TX false ready true focus com.openai.codex
+STATE TX false ready true focus com.openai.codex
+STATE TX false ready true focus com.openai.codex
+STATE TX false ready true focus com.openai.codex
+STATE TX false ready true focus com.openai.codex
+STATE TX false ready true focus com.openai.codex
+STATE TX false ready true focus com.openai.codex
+STATE TX false ready true focus com.openai.codex
+STATE TX false ready true focus com.openai.codex
+STATE TX false ready true focus com.openai.codex
+STATE TX false ready true focus com.openai.codex
+STATE TX false ready true focus com.openai.codex
+STATE TX false ready true focus com.openai.codex
+STATE TX false ready true focus com.openai.codex
+STATE TX false ready true focus com.openai.codex
+STATE TX false ready true focus com.openai.codex
+STATE TX false ready true focus com.openai.codex
+STATE TX false ready true focus com.openai.codex
+STATE TX false ready true focus com.openai.codex
+STATE TX false ready true focus com.openai.codex
+KEY 3 pressed [3] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+STATE TX false ready true focus com.openai.codex
+KEY 3 pressed [3] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [3] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [3] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [3] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [3] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+STATE TX false ready true focus com.openai.codex
+KEY 3 pressed [] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [3] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [3] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+KEY 9 pressed [9] TX false focus nl.pa3eke.FusionLab.XKeysTest minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 9 pressed [] TX false focus nl.pa3eke.FusionLab.XKeysTest minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [3] TX false focus nl.pa3eke.FusionLab.XKeysTest minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [] TX false focus nl.pa3eke.FusionLab.XKeysTest minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [3] TX false focus nl.pa3eke.FusionLab.XKeysTest minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [] TX false focus nl.pa3eke.FusionLab.XKeysTest minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [3] TX false focus nl.pa3eke.FusionLab.XKeysTest minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [] TX false focus nl.pa3eke.FusionLab.XKeysTest minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [3] TX false focus nl.pa3eke.FusionLab.XKeysTest minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [] TX false focus nl.pa3eke.FusionLab.XKeysTest minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [3] TX false focus nl.pa3eke.FusionLab.XKeysTest minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [] TX false focus nl.pa3eke.FusionLab.XKeysTest minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [3] TX false focus nl.pa3eke.FusionLab.XKeysTest minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [] TX false focus nl.pa3eke.FusionLab.XKeysTest minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [3] TX false focus nl.pa3eke.FusionLab.XKeysTest minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [] TX false focus nl.pa3eke.FusionLab.XKeysTest minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [3] TX false focus nl.pa3eke.FusionLab.XKeysTest minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [] TX false focus nl.pa3eke.FusionLab.XKeysTest minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+KEY 3 pressed [3] TX false focus nl.pa3eke.FusionLab.XKeysTest minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [] TX false focus nl.pa3eke.FusionLab.XKeysTest minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [3] TX false focus nl.pa3eke.FusionLab.XKeysTest minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [] TX false focus nl.pa3eke.FusionLab.XKeysTest minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+STATE TX false ready true focus com.openai.codex
+STATE TX false ready true focus com.openai.codex
+STATE TX false ready true focus com.openai.codex
+KEY 3 pressed [3] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [3] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+KEY 3 pressed [3] TX false focus nl.pa3eke.FusionLab.XKeysTest minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [] TX false focus nl.pa3eke.FusionLab.XKeysTest minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [3] TX false focus nl.pa3eke.FusionLab.XKeysTest minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [] TX false focus nl.pa3eke.FusionLab.XKeysTest minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [3] TX false focus nl.pa3eke.FusionLab.XKeysTest minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [] TX false focus nl.pa3eke.FusionLab.XKeysTest minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [3] TX false focus nl.pa3eke.FusionLab.XKeysTest minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [] TX false focus nl.pa3eke.FusionLab.XKeysTest minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [3] TX false focus nl.pa3eke.FusionLab.XKeysTest minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 3 pressed [] TX false focus nl.pa3eke.FusionLab.XKeysTest minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+KEY 2 pressed [2] TX true focus nl.pa3eke.FusionLab.XKeysTest minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+STATE TX true ready true focus nl.pa3eke.FusionLab.XKeysTest
+STATE TX true ready true focus nl.pa3eke.FusionLab.XKeysTest
+KEY 2 pressed [] TX true focus nl.pa3eke.FusionLab.XKeysTest minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+STATE TX true ready true focus nl.pa3eke.FusionLab.XKeysTest
+STATE TX true ready true focus nl.pa3eke.FusionLab.XKeysTest
+STATE TX true ready true focus nl.pa3eke.FusionLab.XKeysTest
+KEY 3 pressed [3] TX true focus nl.pa3eke.FusionLab.XKeysTest minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+KEY 3 pressed [] TX false focus nl.pa3eke.FusionLab.XKeysTest minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+STATE TX false ready true focus nl.pa3eke.FusionLab.XKeysTest
+STATE TX false ready true focus com.openai.codex
+STATE TX false ready true focus com.openai.codex
+STATE TX false ready true focus com.openai.codex
+STATE TX false ready true focus com.openai.codex
+STATE TX false ready true focus com.openai.codex
+STATE TX false ready true focus com.openai.codex
+STATE TX false ready true focus com.openai.codex
+STATE TX false ready true focus com.openai.codex
+KEY 1 pressed [1] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+STATE TX true ready true focus com.openai.codex
+KEY 1 pressed [] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+STATE TX false ready true focus com.openai.codex
+KEY 2 pressed [2] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+STATE TX true ready true focus com.openai.codex
+KEY 2 pressed [] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+STATE TX true ready true focus com.openai.codex
+KEY 3 pressed [3] TX true focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+STATE TX false ready true focus com.openai.codex
+KEY 3 pressed [] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 7, 8, 9]
+KEY 4 pressed [4] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 4, 7, 8, 9]
+KEY 4 pressed [] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 4, 7, 8, 9]
+KEY 5 pressed [5] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 4, 5, 7, 8, 9]
+KEY 5 pressed [] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 4, 5, 7, 8, 9]
+STATE TX false ready true focus com.openai.codex
+KEY 6 pressed [6] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 4, 5, 6, 7, 8, 9]
+KEY 6 pressed [] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 4, 5, 6, 7, 8, 9]
+KEY 7 pressed [7] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 4, 5, 6, 7, 8, 9]
+KEY 7 pressed [] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 4, 5, 6, 7, 8, 9]
+KEY 8 pressed [8] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 4, 5, 6, 7, 8, 9]
+KEY 8 pressed [] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 4, 5, 6, 7, 8, 9]
+KEY 9 pressed [9] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 4, 5, 6, 7, 8, 9]
+KEY 9 pressed [] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 4, 5, 6, 7, 8, 9]
+STATE TX false ready true focus com.openai.codex
+KEY 10 pressed [10] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+KEY 10 pressed [] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+KEY 11 pressed [11] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+KEY 11 pressed [] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+KEY 12 pressed [12] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+KEY 12 pressed [] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+KEY 13 pressed [13] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+KEY 13 pressed [] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+STATE TX false ready true focus com.openai.codex
+KEY 14 pressed [14] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+KEY 14 pressed [] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+KEY 15 pressed [15] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+KEY 15 pressed [] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+KEY 16 pressed [16] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+KEY 16 pressed [] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+KEY 17 pressed [17] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+KEY 17 pressed [] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+KEY 18 pressed [18] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+KEY 18 pressed [] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+STATE TX false ready true focus com.openai.codex
+KEY 19 pressed [19] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+KEY 19 pressed [] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+KEY 20 pressed [20] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+KEY 20 pressed [] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+KEY 21 pressed [21] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]
+KEY 21 pressed [] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]
+KEY 22 pressed [22] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22]
+KEY 22 pressed [] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22]
+KEY 23 pressed [23] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
+KEY 23 pressed [] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
+STATE TX false ready true focus com.openai.codex
+KEY 24 pressed [24] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]
+KEY 24 pressed [] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]
+STATE TX false ready true focus com.openai.codex
+STATE TX false ready true focus com.openai.codex
+KEY 3 pressed [3] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]
+KEY 3 pressed [] TX false focus com.openai.codex minimized false onActiveSpace true seen [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]
+STATE TX false ready true focus com.openai.codex
+STATE TX false ready true focus com.openai.codex
+HID Niet verbonden
+HID Niet verbonden
+STATE TX false ready false focus com.openai.codex
+STATE TX false ready false focus com.openai.codex

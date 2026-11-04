@@ -4,8 +4,12 @@ import LocalAuthentication
 
 protocol DMRPasswordStorage {
  func read(for id:String)->String?
+ func read(for id:String,allowInteraction:Bool)->String?
  func save(_ password:String,for id:String)->Bool
  func remove(for id:String)
+}
+extension DMRPasswordStorage {
+ func read(for id:String,allowInteraction:Bool)->String? {read(for:id)}
 }
 
 struct DMRPasswordStore:DMRPasswordStorage {
@@ -13,8 +17,11 @@ struct DMRPasswordStore:DMRPasswordStorage {
   [kSecClass as String:kSecClassGenericPassword,kSecAttrService as String:"nl.pa3eke.FusionLab.BrandMeister",kSecAttrAccount as String:id]
  }
  func read(for id:String)->String? {
+  read(for:id,allowInteraction:false)
+ }
+ func read(for id:String,allowInteraction:Bool)->String? {
   var q=Self.query(id);q[kSecReturnData as String]=true;q[kSecMatchLimit as String]=kSecMatchLimitOne
-  let context=LAContext();context.interactionNotAllowed=true
+  let context=LAContext();context.interactionNotAllowed = !allowInteraction
   q[kSecUseAuthenticationContext as String]=context
   var result:CFTypeRef?
   guard SecItemCopyMatching(q as CFDictionary,&result)==errSecSuccess,let data=result as? Data else{return nil}

@@ -17,11 +17,13 @@ ditto --norsrc --noextattr "$BUILD_SOURCE_DIR/Sources/FusionLab/Models" "$TEST_S
 ditto --norsrc --noextattr "$BUILD_SOURCE_DIR/Sources/FusionLab/Services" "$TEST_SOURCES/Sources/FusionLab/Services"
 mkdir -p "$TEST_SOURCES/Sources/FusionLab/Views"
 ditto --norsrc --noextattr "$BUILD_SOURCE_DIR/Sources/FusionLab/Views/PTTButton.swift" "$TEST_SOURCES/Sources/FusionLab/Views/PTTButton.swift"
+ditto --norsrc --noextattr "$BUILD_SOURCE_DIR/Sources/FusionLab/Views/RadioLCDView.swift" "$TEST_SOURCES/Sources/FusionLab/Views/RadioLCDView.swift"
 ditto --norsrc --noextattr Tests "$TEST_SOURCES/Tests"
 # Apple's Command Line Tools omit XCTest. This runner uses production sources.
 swiftc -parse-as-library -o "$TEST_SOURCES/FusionLabSelfTest" \
  -I "$BIN_DIR" -Xcc "-fmodule-map-file=$BIN_DIR/YSFCodec.build/module.modulemap" \
+ -Xcc "-fmodule-map-file=$BIN_DIR/MD380Codec.build/module.modulemap" \
  -Xcc -I -Xcc "$PWD/Sources/YSFCodec/include" \
- "$TEST_SOURCES"/Sources/FusionLab/Models/*.swift "$TEST_SOURCES"/Sources/FusionLab/Services/*.swift "$TEST_SOURCES"/Sources/FusionLab/Views/PTTButton.swift \
- "$TEST_SOURCES"/Tests/FusionLabTests/*.swift "$BIN_DIR"/YSFCodec.build/*.o -lc++
+ "$TEST_SOURCES"/Sources/FusionLab/Models/*.swift "$TEST_SOURCES"/Sources/FusionLab/Services/*.swift "$TEST_SOURCES"/Sources/FusionLab/Views/*.swift \
+ "$TEST_SOURCES"/Tests/FusionLabTests/*.swift "$BIN_DIR"/YSFCodec.build/*.o "$BIN_DIR"/MD380Codec.build/*.o -lc++
 "$TEST_SOURCES/FusionLabSelfTest"

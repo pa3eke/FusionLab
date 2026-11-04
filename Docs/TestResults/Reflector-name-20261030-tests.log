@@ -1,0 +1,85 @@
+[0/1] Planning build
+Building for debugging...
+[0/17] Write sources
+[1/17] Compiling YSFCodec crs129.cpp
+[1/17] Compiling YSFCodec YSFConvolution.cpp
+[3/17] Compiling YSFCodec Golay24128.cpp
+[3/17] Compiling YSFCodec cgolay2087.cpp
+[5/17] Compiling YSFCodec cbptc19696.cpp
+[6/17] Compiling YSFCodec YSFFICH.cpp
+[7/17] Compiling YSFCodec chamming.cpp
+[8/17] Copying YSFHosts.txt
+[9/17] Compiling YSFCodec DMRBridge.cpp
+[10/17] Compiling MD380Codec FEC.c
+[11/17] Compiling YSFCodec Bridge.cpp
+[11/17] Write swift-version--1AB21518FC5DEDBE.txt
+[13/17] Compiling YSFCodec CRCenc.cpp
+[14/17] Compiling MD380Codec Emulator.cpp
+[16/72] Compiling FusionLab FusionLabApp.swift
+[17/72] Compiling FusionLab AMBE49BitOrder.swift
+[18/72] Compiling FusionLab DMRConfiguration.swift
+[19/72] Compiling FusionLab DMRPackets.swift
+[20/72] Compiling FusionLab NXDNConfiguration.swift
+[21/72] Compiling FusionLab NXDNHost.swift
+[22/78] Compiling FusionLab GlobalPTTKey.swift
+[23/78] Compiling FusionLab MD380Vocoder.swift
+[24/78] Compiling FusionLab MicrophoneGain.swift
+[25/78] Compiling FusionLab MicrophoneInput.swift
+[26/78] Compiling FusionLab MicrophoneResampler.swift
+[27/78] Compiling FusionLab NXDNCallsignDirectory.swift
+[28/78] Compiling FusionLab ReceiveEQ.swift
+[29/78] Compiling FusionLab TransmitLimit.swift
+[30/78] Compiling FusionLab VocoderBackend.swift
+[31/78] Compiling FusionLab XKeys.swift
+[32/78] Compiling FusionLab YSFHost.swift
+[33/78] Compiling FusionLab AudioInputDevices.swift
+[34/78] Compiling FusionLab NXDNPackets.swift
+[35/78] Compiling FusionLab PTTKeyState.swift
+[36/78] Compiling FusionLab PTTRequests.swift
+[37/78] Compiling FusionLab Packets.swift
+[38/78] Compiling FusionLab QuickPreset.swift
+[39/78] Compiling FusionLab ReceiveAGC.swift
+[40/78] Compiling FusionLab XKeysDeviceManager.swift
+[41/78] Compiling FusionLab YSFHostCatalog.swift
+[42/78] Compiling FusionLab AudioControlView.swift
+[43/78] Compiling FusionLab ConnectionView.swift
+[44/78] Compiling FusionLab ConsolePanel.swift
+[45/78] Compiling FusionLab ConsoleRenderState.swift
+[46/78] Compiling FusionLab ConsoleSettingsView.swift
+[47/78] Compiling FusionLab ContentView.swift
+[48/78] Compiling FusionLab DMRConnectionView.swift
+[49/78] Compiling FusionLab DestinationControlView.swift
+[50/78] Compiling FusionLab DiagnosticLogView.swift
+[51/78] Compiling FusionLab MicrophoneMeterView.swift
+[52/78] Emitting module FusionLab
+[53/78] Compiling FusionLab NXDNHostCatalog.swift
+[54/78] Compiling FusionLab RadioSession.swift
+[55/78] Compiling FusionLab TransmissionLoop.swift
+[56/78] Compiling FusionLab UDPLink.swift
+[57/78] Compiling FusionLab VocoderTransport.swift
+[58/78] Compiling FusionLab XKeysController.swift
+[59/78] Compiling FusionLab AudioOutput.swift
+[60/78] Compiling FusionLab BrandMeisterConnection.swift
+[61/78] Compiling FusionLab BrandMeisterHandshake.swift
+[62/78] Compiling FusionLab DMRCallsignDirectory.swift
+[63/78] Compiling FusionLab DMRPasswordStore.swift
+[64/78] Compiling FusionLab FusionTransmitter.swift
+[65/78] Compiling FusionLab ReceiverDisplayView.swift
+[66/78] Compiling FusionLab TransmitTimeView.swift
+[67/78] Compiling FusionLab TransmitView.swift
+[68/78] Compiling FusionLab XKeysSettingsView.swift
+[69/78] Compiling FusionLab YSFHostPicker.swift
+[70/78] Compiling FusionLab resource_bundle_accessor.swift
+[71/78] Compiling FusionLab NXDNHostPicker.swift
+[72/78] Compiling FusionLab PTTButton.swift
+[73/78] Compiling FusionLab PresetSelectionView.swift
+[74/78] Compiling FusionLab QuickPresetView.swift
+[75/78] Compiling FusionLab RadioLCDView.swift
+[76/78] Compiling FusionLab ReceiveEQView.swift
+[76/79] Write Objects.LinkFileList
+[77/79] Linking FusionLab
+[78/79] Applying FusionLab
+Build complete! (4.33s)
+MD380 local encode/decode: 120 frames in 1.7144951250083977 s; decoded peak 1223
+PTT actual native bounds: 165.0 × 48.0
+PASS: LCD presentation/dBFS/native rendering, XK-24 parsing/edges/storage/LEDs, central PTT ownership/USB loss/reconnect/inhibition/emergency, Fusion, DMR and NXDN reference vectors, NXDN host cache/presets, NXDN RX/TX/80ms timing and both vocoders, BrandMeister authentication/RX/TX/mode switch, receive filtering, PCM, FICH, local UDP, PTT hold/toggle, 180s deadline, microphone permission, pacing, padding and timeout

@@ -1,0 +1,97 @@
+Building for debugging...
+[0/19] Compiling YSFCodec Golay24128.cpp
+[1/19] Compiling YSFCodec cbptc19696.cpp
+[2/19] Compiling YSFCodec YSFConvolution.cpp
+[3/19] Compiling YSFCodec cgolay2087.cpp
+[3/19] Compiling YSFCodec YSFFICH.cpp
+[3/19] Write sources
+[3/19] Copying YSFHosts.txt
+[7/19] Write FusionLab-entitlement.plist
+[8/19] Compiling YSFCodec Bridge.cpp
+[9/19] Compiling YSFCodec DMRBridge.cpp
+[10/19] Compiling YSFCodec crs129.cpp
+[11/19] Compiling YSFCodec chamming.cpp
+[12/19] Compiling YSFCodec CRCenc.cpp
+[13/19] Write swift-version--1AB21518FC5DEDBE.txt
+[14/19] Compiling MD380Codec FEC.c
+[15/19] Compiling MD380Codec Emulator.cpp
+[17/74] Compiling FusionLab NXDNPackets.swift
+[18/74] Compiling FusionLab PTTKeyState.swift
+[19/74] Compiling FusionLab PTTRequests.swift
+[20/74] Compiling FusionLab Packets.swift
+[21/74] Compiling FusionLab QuickPreset.swift
+[22/74] Compiling FusionLab ReceiveAGC.swift
+[23/74] Emitting module FusionLab
+[24/80] Compiling FusionLab ConsoleSettingsView.swift
+[25/80] Compiling FusionLab ContentView.swift
+[26/80] Compiling FusionLab DMRConnectionView.swift
+[27/80] Compiling FusionLab DestinationControlView.swift
+[28/80] Compiling FusionLab DiagnosticLogView.swift
+[29/80] Compiling FusionLab MicrophoneMeterView.swift
+[30/80] Compiling FusionLab GlobalPTTKey.swift
+[31/80] Compiling FusionLab MD380Vocoder.swift
+[32/80] Compiling FusionLab MicrophoneGain.swift
+[33/80] Compiling FusionLab MicrophoneInput.swift
+[34/80] Compiling FusionLab MicrophoneResampler.swift
+[35/80] Compiling FusionLab NXDNCallsignDirectory.swift
+[36/80] Compiling FusionLab FusionLabApp.swift
+[37/80] Compiling FusionLab AMBE49BitOrder.swift
+[38/80] Compiling FusionLab DMRConfiguration.swift
+[39/80] Compiling FusionLab DMRPackets.swift
+[40/80] Compiling FusionLab NXDNConfiguration.swift
+[41/80] Compiling FusionLab NXDNHost.swift
+[42/80] Compiling FusionLab AudioOutput.swift
+[43/80] Compiling FusionLab BrandMeisterConnection.swift
+[44/80] Compiling FusionLab BrandMeisterHandshake.swift
+[45/80] Compiling FusionLab DMRCallsignDirectory.swift
+[46/80] Compiling FusionLab DMRPasswordStore.swift
+[47/80] Compiling FusionLab FusionTransmitter.swift
+[48/80] Compiling FusionLab XKeysDeviceManager.swift
+[49/80] Compiling FusionLab YSFHostCatalog.swift
+[50/80] Compiling FusionLab AudioControlView.swift
+[51/80] Compiling FusionLab ConnectionView.swift
+[52/80] Compiling FusionLab ConsolePanel.swift
+[53/80] Compiling FusionLab ConsoleRenderState.swift
+[54/80] Compiling FusionLab NXDNHostPicker.swift
+[55/80] Compiling FusionLab PTTButton.swift
+[56/80] Compiling FusionLab PresetSelectionView.swift
+[57/80] Compiling FusionLab QuickPresetView.swift
+[58/80] Compiling FusionLab RadioLCDView.swift
+[59/80] Compiling FusionLab ReceiveEQView.swift
+[60/80] Compiling FusionLab ReceiveEQ.swift
+[61/80] Compiling FusionLab TransmitLimit.swift
+[62/80] Compiling FusionLab VocoderBackend.swift
+[63/80] Compiling FusionLab XKeys.swift
+[64/80] Compiling FusionLab YSFHost.swift
+[65/80] Compiling FusionLab AudioInputDevices.swift
+[66/80] Compiling FusionLab NXDNHostCatalog.swift
+[67/80] Compiling FusionLab RadioSession.swift
+[68/80] Compiling FusionLab TransmissionLoop.swift
+[69/80] Compiling FusionLab UDPLink.swift
+[70/80] Compiling FusionLab VocoderTransport.swift
+[71/80] Compiling FusionLab XKeysController.swift
+[72/80] Compiling FusionLab ReceiverDisplayView.swift
+[73/80] Compiling FusionLab TransmitTimeView.swift
+[74/80] Compiling FusionLab TransmitView.swift
+[75/80] Compiling FusionLab XKeysSettingsView.swift
+[76/80] Compiling FusionLab YSFHostPicker.swift
+[77/80] Compiling FusionLab resource_bundle_accessor.swift
+[77/80] Write Objects.LinkFileList
+[78/80] Linking FusionLab
+[79/80] Applying FusionLab
+Build complete! (50.72s)
+/private/tmp/FusionLab-build-501/Project-6d2f66e07d5557d592cf/Sources/FusionLab/Views/ContentView.swift:48:43: warning: '+' was deprecated in macOS 26.0: Use string interpolation on `Text` instead: `Text("Hello \(name)")` [#DeprecatedDeclaration]
+46 |  private var header:some View {
+47 |   HStack{
+48 |    (Text("Fusion").foregroundColor(.white)+Text("Lab").foregroundColor(.cyan)).font(.system(size:27,weight:.bold,design:.rounded)).italic()
+   |                                           `- warning: '+' was deprecated in macOS 26.0: Use string interpolation on `Text` instead: `Text("Hello \(name)")` [#DeprecatedDeclaration]
+49 |    Text(session.call).font(.headline.monospaced()).foregroundStyle(.secondary)
+50 |    Spacer()
+
+[#DeprecatedDeclaration]: <https://docs.swift.org/compiler/documentation/diagnostics/deprecated-declaration>
+Console stress: 120 bursts, wall 4.794 s, CPU 2.022 s (42.2%)
+Rendered console fixture: dmr, 1120 × 740
+Rendered console fixture: minimum, 940 × 640
+Rendered console fixture: fusion, 1120 × 740
+Rendered console fixture: nxdn, 1120 × 740
+Rendered console fixture: wide, 1500 × 950

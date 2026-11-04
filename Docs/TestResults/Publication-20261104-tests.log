@@ -1,0 +1,7 @@
+[0/1] Planning build
+Building for debugging...
+[0/3] Write swift-version--1AB21518FC5DEDBE.txt
+Build complete! (0.17s)
+MD380 local encode/decode: 120 frames in 1.6561505416666478 s; decoded peak 1223
+PTT actual native bounds: 165.0 × 48.0
+PASS: LCD presentation/dBFS/native rendering, XK-24 parsing/edges/storage/LEDs, central PTT ownership/USB loss/reconnect/inhibition/emergency, Fusion, DMR and NXDN reference vectors, NXDN host cache/presets, NXDN RX/TX/80ms timing and both vocoders, BrandMeister authentication/RX/TX/mode switch, receive filtering, PCM, FICH, local UDP, PTT hold/toggle, 180s deadline, microphone permission, pacing, padding and timeout

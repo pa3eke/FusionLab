@@ -1,54 +1,81 @@
 import SwiftUI
 
-struct ContentView: View {
+struct ContentView:View {
  @ObservedObject var session:RadioSession
  @StateObject private var hosts=YSFHostCatalog()
+ @StateObject private var nxdnHosts=NXDNHostCatalog()
+ @State private var setup=false
+ @State private var engineering=false
  var body:some View {
-  ScrollView {
-  VStack(alignment:.leading,spacing:16){
-   HStack(spacing:12){
-    Image(systemName:"antenna.radiowaves.left.and.right").font(.largeTitle).foregroundStyle(.tint)
-    VStack(alignment:.leading){Text("FusionLab").font(.title.bold());Text("Fusion · YSF / DMR · BrandMeister · 0.4.9").foregroundStyle(.secondary)}
-    Spacer()
-    Text(session.call).font(.title3.monospaced().bold())
-   }
-   ConnectionView(session:session,hosts:hosts)
-   GroupBox {
-    VStack(alignment:.leading,spacing:8){
-     HStack{Label(session.mode,systemImage:"waveform").foregroundStyle(.secondary);Spacer();Text(session.transmitting ? "TX":"RX").font(.headline).foregroundStyle(session.transmitting ? .red:session.level>0 ? .green:.secondary)}
-     Group {
-      if let url=session.receivedStationQRZURL {
-       Link(session.station,destination:url).help("Open de ontvangen roepnaam op QRZ.com")
-      }else {
-       Text(session.transmitting ? session.call:session.station).textSelection(.enabled)
-      }
-     }.font(.system(size:30,weight:.bold,design:.monospaced)).lineLimit(1).minimumScaleFactor(0.5)
-     HStack{Text("Gateway: \(session.gateway)").font(.caption);Spacer();Image(systemName:"speaker.wave.2");Slider(value:$session.volume,in:0...1).frame(width:130);Text("\(Int(session.volume*100))%").monospacedDigit().frame(width:40)}
-     Toggle("Ontvangst AGC · automatisch volume",isOn:$session.receiveAGCEnabled)
-      .font(.caption).help("Maakt zachte en harde stations gelijkmatiger hoorbaar. Werkt alleen op ontvangst; de volumeregelaar bepaalt je luistersterkte.")
-     ReceiveEQView(session:session)
-     ProgressView(value:Double(min(session.level*4,1))).tint(.green)
-     HStack {counter(session.selectedMode == .fusion ? "YSF":"DMR",session.networkFrames);Spacer();counter("AMBE",session.voiceFrames);Spacer();counter("PCM",session.pcmFrames);Spacer();counter("Verlies",session.dropped);Spacer();counter("Fouten",session.errors)}.padding(.top,4)
-     if !session.receptionDetail.isEmpty {Text(session.receptionDetail).font(.caption.monospaced()).foregroundStyle(.secondary)}
-    }.padding(8)
-   }
-   TransmitView(session:session)
-   HStack{Label(session.ysfStatus,systemImage:"network");Spacer();Label(session.ambeStatus,systemImage:"cpu")}.font(.caption)
-   VStack(alignment:.leading,spacing:6){
-    HStack{Text("Diagnostiek").font(.headline);Spacer();Button("Wis log"){session.log=""}.disabled(session.active)}
-    ScrollView {
-     Text(session.log.isEmpty ? "Klaar voor de eerste spraaktest. Er wordt niet automatisch verbonden.":session.log)
-      .font(.system(size:11,design:.monospaced)).frame(maxWidth:.infinity,alignment:.leading).textSelection(.enabled).padding(10)
-    }.background(.quaternary.opacity(0.4),in:RoundedRectangle(cornerRadius:8)).frame(minHeight:90)
-   }
-  }.padding(20)
+  GeometryReader {geometry in
+   let centerWidth=max(1,geometry.size.width-323)
+   ScrollView(.vertical){
+    VStack(spacing:6){
+     header
+     HStack(alignment:.top,spacing:12){
+      modeRail.frame(width:80)
+      VStack(spacing:6){
+       ReceiverDisplayView(session:session,hosts:hosts).equatable()
+       DestinationControlView(session:session,hosts:hosts,nxdnHosts:nxdnHosts).equatable()
+       ConsolePanel(title:""){QuickPresetView(session:session,hosts:hosts,nxdnHosts:nxdnHosts).equatable()}
+       HStack(alignment:.top,spacing:12){
+        ConsolePanel(title:"Audio"){AudioControlView(session:session).equatable()}.frame(width:(centerWidth-12)/2)
+        ConsolePanel(title:"Microfoon"){MicrophoneControlView(session:session).equatable()}.frame(width:(centerWidth-12)/2)
+       }
+      }.frame(width:centerWidth)
+      VStack(spacing:14){
+       ConsolePanel(title:"Geheugen / select"){PresetSelectionView(session:session).equatable()}
+       ConsolePanel(title:""){PTTControlView(session:session).equatable()}
+      }.frame(width:195)
+     }
+     footer
+    }.padding(12)
+   }.scrollBounceBehavior(.basedOnSize)
   }
-   .onExitCommand{session.stopTransmit()}
-   .onReceive(NotificationCenter.default.publisher(for:NSApplication.willResignActiveNotification)){_ in session.handleFocusLoss()}
-   .onReceive(NotificationCenter.default.publisher(for:NSApplication.willTerminateNotification)){_ in session.disconnect()}
-   .onDisappear{session.disconnect()}
+  .background(ConsolePalette.background).preferredColorScheme(.dark)
+  .sheet(isPresented:$setup){ConsoleSettingsView(session:session,hosts:hosts,nxdnHosts:nxdnHosts)}
+  .sheet(isPresented:$engineering){EngineeringView(session:session)}
+  .onAppear{session.restoreDMRPasswordIfNeeded();session.startXKeys()}
+  .onExitCommand{session.stopTransmit()}
+  .onReceive(NotificationCenter.default.publisher(for:NSApplication.willResignActiveNotification)){_ in session.handleFocusLoss()}
+  .onReceive(NotificationCenter.default.publisher(for:NSApplication.willTerminateNotification)){_ in session.stopXKeys();session.disconnect()}
+  .onReceive(NotificationCenter.default.publisher(for:NSWindow.willCloseNotification)){note in
+   if let window=note.object as? NSWindow,window.title.hasPrefix("FusionLab ·") {session.stopXKeys();session.disconnect()}
+  }
  }
- private func counter(_ title:String,_ n:Int)->some View {
-  VStack(alignment:.leading){Text(title).font(.caption).foregroundStyle(.secondary);Text("\(n)").monospacedDigit().font(.headline)}
+ private var header:some View {
+  HStack{
+   (Text("Fusion").foregroundColor(.white)+Text("Lab").foregroundColor(.cyan)).font(.system(size:27,weight:.bold,design:.rounded)).italic()
+   Text(session.call).font(.headline.monospaced()).foregroundStyle(.secondary)
+   Spacer()
+   Text("0.7.3").font(.caption).foregroundStyle(.secondary)
+   Button("Engineering",systemImage:"waveform.path.ecg"){engineering=true}
+   Button("Setup",systemImage:"gearshape.fill"){setup=true}
+  }.padding(.horizontal,6)
+ }
+ private var modeRail:some View {
+  VStack(spacing:10){
+   modeButton("DMR",mode:.dmr)
+   Button("D-STAR"){}.buttonStyle(ConsoleButtonStyle()).disabled(true).opacity(0.35).help("D-STAR is nog niet beschikbaar in FusionLab")
+   modeButton("C4FM",mode:.fusion)
+   modeButton("NXDN",mode:.nxdn)
+   Button{setup=true}label:{VStack(spacing:6){Image(systemName:"gearshape.fill").font(.title2);Text("SETUP").font(.caption)}}.buttonStyle(ConsoleButtonStyle())
+  }
+ }
+ private func modeButton(_ title:String,mode:DigitalMode)->some View {
+  Button(title){session.requestMode(mode);if !session.connectionError.isEmpty {setup=true}}.buttonStyle(ConsoleButtonStyle(selected:session.selectedMode==mode)).disabled(!session.canSwitchMode).help(session.active ? "Wissel automatisch naar \(title) met dezelfde vocoder":title)
+ }
+ private var footer:some View {
+  HStack(spacing:8){
+   Circle().fill(session.readyToTransmit ? Color.green:Color.secondary).frame(width:9,height:9)
+   Text(session.modeSwitchTarget.map{"Wisselen naar \($0.title)…"} ?? session.ysfStatus).lineLimit(1)
+   Spacer()
+   Text(session.ambeStatus).lineLimit(1).foregroundStyle(.secondary)
+   Button(session.switchingMode ? "Annuleren":session.active ? "Ontkoppelen":"Verbinden"){
+    if session.active || session.switchingMode {session.disconnect()}else{session.connect();if !session.connectionError.isEmpty {setup=true}}
+   }.buttonStyle(.borderedProminent)
+    .disabled(!session.active && !session.switchingMode && session.selectedVocoder == .ambeServer && !session.exclusive)
+    .keyboardShortcut(.return,modifiers:.command)
+  }.font(.caption).padding(10).background(Color.white.opacity(0.04),in:RoundedRectangle(cornerRadius:8))
  }
 }

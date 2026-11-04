@@ -11,7 +11,12 @@ final class AudioOutput {
  func setEQ(_ settings:ReceiveEQSettings){perform{[self] in equalizer.configure(settings)}}
  private var lastAudioUptime:TimeInterval?
  func setAGCEnabled(_ enabled:Bool){perform{[self] in agcEnabled=enabled;agc.reset();lastAudioUptime=nil}}
- var volume:Float=0.6 {didSet{let value=volume;perform{[self] in player.volume=value}}}
+ private var playbackVolume:Float=0.6,playbackMuted=false
+ var volume:Float=0.6 {didSet{let value=volume;perform{[self] in playbackVolume=value;applyVolume()}}}
+ func setMuted(_ muted:Bool){perform{[self] in playbackMuted=muted;applyVolume()}}
+ private func applyVolume(){player.volume=playbackMuted ? 0:playbackVolume}
+ // Read the actual player gain on its owning queue, also useful for diagnostics.
+ var outputGain:Float {if DispatchQueue.getSpecific(key:key)==true{return player.volume};return queue.sync{player.volume}}
  init(queue:DispatchQueue = .main){self.queue=queue;queue.setSpecific(key:key,value:true);engine.attach(player);engine.connect(player,to:engine.mainMixerNode,format:format);player.volume=volume}
  private func perform(_ action:@escaping()->Void){if DispatchQueue.getSpecific(key:key)==true{action()}else{queue.async(execute:DispatchWorkItem(block:action))}}
  func start()throws{

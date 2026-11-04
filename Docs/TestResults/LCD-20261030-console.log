@@ -1,0 +1,19 @@
+[0/1] Planning build
+Building for debugging...
+[0/3] Write swift-version--1AB21518FC5DEDBE.txt
+Build complete! (0.16s)
+/private/tmp/FusionLab-build-501/Project-402c29e53f8be1f603fd/Sources/FusionLab/Views/ContentView.swift:48:43: warning: '+' was deprecated in macOS 26.0: Use string interpolation on `Text` instead: `Text("Hello \(name)")` [#DeprecatedDeclaration]
+46 |  private var header:some View {
+47 |   HStack{
+48 |    (Text("Fusion").foregroundColor(.white)+Text("Lab").foregroundColor(.cyan)).font(.system(size:27,weight:.bold,design:.rounded)).italic()
+   |                                           `- warning: '+' was deprecated in macOS 26.0: Use string interpolation on `Text` instead: `Text("Hello \(name)")` [#DeprecatedDeclaration]
+49 |    Text(session.call).font(.headline.monospaced()).foregroundStyle(.secondary)
+50 |    Spacer()
+
+[#DeprecatedDeclaration]: <https://docs.swift.org/compiler/documentation/diagnostics/deprecated-declaration>
+Console stress: 120 bursts, wall 4.705 s, CPU 1.958 s (41.6%)
+Rendered console fixture: dmr, 1120 × 740
+Rendered console fixture: minimum, 940 × 640
+Rendered console fixture: fusion, 1120 × 740
+Rendered console fixture: nxdn, 1120 × 740
+Rendered console fixture: wide, 1500 × 950

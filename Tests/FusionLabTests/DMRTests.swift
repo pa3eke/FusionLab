@@ -2,10 +2,11 @@ import Foundation
 import YSFCodec
 
 final class MemoryDMRPasswordStore:DMRPasswordStorage {
+ private let lock=NSLock()
  var values=[String:String]()
- func read(for id:String)->String? {values[id]}
- func save(_ password:String,for id:String)->Bool {values[id]=password;return true}
- func remove(for id:String){values.removeValue(forKey:id)}
+ func read(for id:String)->String? {lock.lock();defer{lock.unlock()};return values[id]}
+ func save(_ password:String,for id:String)->Bool {lock.lock();defer{lock.unlock()};values[id]=password;return true}
+ func remove(for id:String){lock.lock();defer{lock.unlock()};values.removeValue(forKey:id)}
 }
 
 extension ProtocolTests {
@@ -203,6 +204,9 @@ extension ProtocolTests {
   s.dmr=DMRConfiguration(radioID:"2040001",ssid:"01",host:"127.0.0.1",port:String(master.port))
   s.ambeHost="127.0.0.1";s.ambePort=String(ambe.port);s.dmrPassword="test-secret"
   s.loadDMRPassword();XCTAssertEqual(s.dmrPassword,"test-secret","A missing saved password must not erase text already entered")
+  let passwordDeadline=Date().addingTimeInterval(2)
+  while s.loadingDMRPassword,Date()<passwordDeadline {try await Task.sleep(nanoseconds:10_000_000)}
+  XCTAssertEqual(s.dmrPassword,"test-secret")
   s.connect()
   var deadline=Date().addingTimeInterval(4)
   while !s.canTransmit,Date()<deadline {try await Task.sleep(nanoseconds:20_000_000)}
@@ -211,6 +215,10 @@ extension ProtocolTests {
   XCTAssertEqual(store.values["2040001"],"test-secret")
   s.selectMode(.fusion);XCTAssertEqual(s.selectedMode,.dmr)
   s.toggleTransmit()
+  s.requestMode(.fusion)
+  XCTAssertEqual(s.selectedMode,.dmr,"A live PTT must not be interrupted by a mode request")
+  XCTAssertEqual(s.switchingMode,false)
+  XCTAssertEqual(s.transmitting,true)
   for _ in 0..<15 {mic.emit([Float](repeating:0.1,count:160));try await Task.sleep(nanoseconds:20_000_000)}
   s.stopTransmit();deadline=Date().addingTimeInterval(3)
   while (s.transmitting || dmrWire.count<7),Date()<deadline {try await Task.sleep(nanoseconds:20_000_000)}
@@ -237,17 +245,45 @@ extension ProtocolTests {
   XCTAssertEqual(DMRPackets.receive(dmrWire.last!)?.destination,204)
   XCTAssertEqual(DMRPackets.receive(dmrWire.last!)?.privateCall,false)
   XCTAssertEqual(logins,1);XCTAssertEqual(rates.count,1)
-  s.disconnect();deadline=Date().addingTimeInterval(2)
-  while s.active,Date()<deadline {try await Task.sleep(nanoseconds:20_000_000)}
-  XCTAssertEqual(closed,1)
-  s.selectMode(.fusion);s.host="127.0.0.1";s.port=String(master.port);s.exclusive=true;s.connect()
+  s.host="127.0.0.1";s.port=String(master.port)
+  s.requestMode(.fusion)
+  XCTAssertEqual(s.switchingMode,true)
+  s.requestMode(.fusion) // repeated click while closing must not start twice
+  XCTAssertEqual(s.modeSwitchTarget,.fusion)
+
   deadline=Date().addingTimeInterval(4)
   while !s.canTransmit,Date()<deadline {try await Task.sleep(nanoseconds:20_000_000)}
   XCTAssertEqual(s.canTransmit,true,s.log);XCTAssertEqual(rates.last,Packets.rate)
+  XCTAssertEqual(s.selectedMode,.fusion);XCTAssertEqual(s.switchingMode,false)
+  XCTAssertEqual(s.selectedVocoder,.ambeServer);XCTAssertEqual(s.exclusive,true)
+  XCTAssertEqual(closed,1)
+  try await Task.sleep(nanoseconds:350_000_000)
+  XCTAssertEqual(s.active,true,"The previous disconnect fallback must not close the new connection")
   s.toggleTransmit()
   for _ in 0..<10 {mic.emit([Float](repeating:0.1,count:160));try await Task.sleep(nanoseconds:20_000_000)}
   s.stopTransmit();deadline=Date().addingTimeInterval(3)
   while (s.transmitting || ysfWire.count<4),Date()<deadline {try await Task.sleep(nanoseconds:20_000_000)}
   XCTAssertEqual(ysfWire.count,4,s.log)
+  // Invalid target settings leave the working Fusion connection in place.
+  s.dmrPassword="";s.requestMode(.dmr)
+  XCTAssertEqual(s.selectedMode,.fusion);XCTAssertEqual(s.active,true)
+  XCTAssertEqual(s.switchingMode,false);XCTAssertEqual(logins,1)
+  XCTAssertEqual(s.connectionError.isEmpty,false)
+  s.dmrPassword="test-secret";s.requestMode(.dmr)
+  deadline=Date().addingTimeInterval(4)
+  while (s.switchingMode || !s.canTransmit),Date()<deadline {try await Task.sleep(nanoseconds:20_000_000)}
+  XCTAssertEqual(s.selectedMode,.dmr);XCTAssertEqual(s.canTransmit,true,s.log)
+  XCTAssertEqual(logins,2);XCTAssertEqual(rates,[VoiceProfile.dmrRate,Packets.rate,VoiceProfile.dmrRate])
+  try await Task.sleep(nanoseconds:350_000_000)
+  XCTAssertEqual(s.active,true,"Old YSF unlink completion/fallback cannot terminate the new DMR connection")
+  // Cancel a queued change, then wait beyond all old disconnect callbacks.
+  s.requestMode(.fusion);s.disconnect()
+  deadline=Date().addingTimeInterval(2)
+  while s.active,Date()<deadline {try await Task.sleep(nanoseconds:20_000_000)}
+  try await Task.sleep(nanoseconds:350_000_000)
+  XCTAssertEqual(s.active,false);XCTAssertEqual(s.switchingMode,false)
+  XCTAssertEqual(s.selectedMode,.dmr);XCTAssertEqual(logins,2)
+  s.requestMode(.fusion)
+  XCTAssertEqual(s.selectedMode,.fusion);XCTAssertEqual(s.active,false,"Idle mode selection must not auto-connect")
  }
 }

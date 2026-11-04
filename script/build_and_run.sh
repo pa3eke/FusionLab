@@ -19,6 +19,14 @@ BINARY="$(swift build --package-path "$BUILD_SOURCE_DIR" --scratch-path "$BUILD_
 mkdir -p "$APP_BUNDLE/Contents/MacOS"
 cp -X "$BINARY" "$APP_BUNDLE/Contents/MacOS/FusionLab"
 mkdir -p "$APP_BUNDLE/Contents/Resources"
+MD380_RUNTIME="$HOME/Library/Application Support/FusionLab/MD380/libunicorn.2.dylib"
+if [[ -f "$MD380_RUNTIME" ]]; then
+ mkdir -p "$APP_BUNDLE/Contents/Frameworks"
+ ditto --norsrc --noextattr "$MD380_RUNTIME" "$APP_BUNDLE/Contents/Frameworks/libunicorn.2.dylib"
+ codesign --force --sign - "$APP_BUNDLE/Contents/Frameworks/libunicorn.2.dylib"
+ mkdir -p "$APP_BUNDLE/Contents/Resources/MD380-Licenses"
+ cp "$ROOT_DIR/Sources/MD380Codec/vendor/COPYING" "$ROOT_DIR/Sources/MD380Codec/vendor/COPYING.LGPL2" "$APP_BUNDLE/Contents/Resources/MD380-Licenses/"
+fi
 ditto --norsrc --noextattr "$(dirname "$BINARY")/FusionLab_FusionLab.bundle" "$APP_BUNDLE/Contents/Resources/FusionLab_FusionLab.bundle"
 cat > "$APP_BUNDLE/Contents/Info.plist" <<'PLIST'
 <?xml version="1.0" encoding="UTF-8"?>
@@ -28,8 +36,8 @@ cat > "$APP_BUNDLE/Contents/Info.plist" <<'PLIST'
 <key>CFBundleIdentifier</key><string>nl.pa3eke.FusionLab</string>
 <key>CFBundleName</key><string>FusionLab</string>
 <key>CFBundlePackageType</key><string>APPL</string>
-<key>CFBundleShortVersionString</key><string>0.4.9</string>
-<key>CFBundleVersion</key><string>24</string>
+<key>CFBundleShortVersionString</key><string>0.7.3</string>
+<key>CFBundleVersion</key><string>41</string>
 <key>LSMinimumSystemVersion</key><string>14.0</string>
 <key>NSPrincipalClass</key><string>NSApplication</string>
 <key>NSMicrophoneUsageDescription</key><string>FusionLab gebruikt de microfoon voor de niveautest en voor spraak tijdens PTT-zenden.</string>

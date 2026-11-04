@@ -36,7 +36,7 @@ struct DMRConnectionView:View {
    }.disabled(session.transmitting || session.preparingTransmit)
    HStack {
     Toggle("Bewaar wachtwoord in Sleutelhanger",isOn:$session.rememberDMRPassword).font(.caption)
-    Button("Ophalen"){session.loadDMRPassword()}.font(.caption)
+    Button(session.loadingDMRPassword ? "Ophalen…":"Ophalen"){session.loadDMRPassword()}.font(.caption).disabled(session.loadingDMRPassword)
     Spacer()
    }.disabled(session.active)
    Text("Je eigen 7-cijferige DMR-ID en het Hotspot Security-wachtwoord uit BrandMeister SelfCare. Een talkgroup wordt actief na jouw PTT; kies Privé voor een individuele oproep of echo.")

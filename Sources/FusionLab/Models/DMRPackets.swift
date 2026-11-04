@@ -2,10 +2,12 @@ import Foundation
 import CryptoKit
 import YSFCodec
 
-enum DigitalMode:String,CaseIterable,Identifiable {
- case fusion,dmr
+enum DigitalMode:String,CaseIterable,Identifiable,Codable {
+ case fusion,dmr,nxdn
  var id:String {rawValue}
- var title:String {self == .fusion ? "Fusion · YSF":"DMR · BrandMeister"}
+ var title:String {switch self {case .fusion:return "Fusion · YSF";case .dmr:return "DMR · BrandMeister";case .nxdn:return "NXDN"}}
+ var shortTitle:String {switch self {case .fusion:return "YSF";case .dmr:return "DMR";case .nxdn:return "NXDN"}}
+ var voiceTitle:String {switch self {case .fusion:return "Fusion DN · V/D2";case .dmr:return "DMR · BrandMeister";case .nxdn:return "NXDN · 4800"}}
 }
 
 struct DMRVoiceSettings:Equatable {
@@ -15,13 +17,14 @@ struct DMRVoiceSettings:Equatable {
 }
 
 enum VoiceProfile:Equatable {
- case fusion,dmr(DMRVoiceSettings)
- var blocks:Int {if case .fusion=self{return 5};return 3}
- var bits:UInt8 {if case .fusion=self{return 49};return 72}
+ static let dmrRate=Data([0x61,0,13,0,0x0a,4,0x31,7,0x54,0x24,0,0,0,0,0,0x6f,0x48])
+ case fusion,dmr(DMRVoiceSettings),nxdn(NXDNVoiceSettings)
+ var blocks:Int {switch self {case .fusion:return 5;case .dmr:return 3;case .nxdn:return 4}}
+ var bits:UInt8 {if case .dmr=self{return 72};return 49}
  var interval:TimeInterval {Double(blocks)*0.02}
  var rate:Data {
-  if case .fusion=self{return Packets.rate}
-  return Data([0x61,0,13,0,0x0a,4,0x31,7,0x54,0x24,0,0,0,0,0,0x6f,0x48])
+  if case .dmr=self{return Self.dmrRate}
+  return Packets.rate
  }
 }
 

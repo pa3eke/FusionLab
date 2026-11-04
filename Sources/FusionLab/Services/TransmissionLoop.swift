@@ -90,7 +90,7 @@ final class TransmissionLoop {
   if !value {reception.discarded += rx.count;rx=[];reception.buffered=0;decodeWaiting=nil;decodeWarning=false}
   if value {ensureTimer()}else if tx.phase == .idle {timer?.cancel();timer=nil}
  }}
- func start(call:String){perform{[self] in guard enabled else{return};rx=[];decodeWaiting=nil;decodeWarning=false;tx.start(call:call,profile:profile);lastUI = .distantPast;ensureTimer()}}
+ func start(call:String,limit:TransmitLimit = .threeMinutes){perform{[self] in guard enabled else{return};rx=[];decodeWaiting=nil;decodeWarning=false;tx.start(call:call,profile:profile,limit:limit);lastUI = .distantPast;ensureTimer()}}
  func stop(){perform{[self] in token=nil;tx.stop()}}
  func cancel(){perform{[self] in token=nil;tx.cancel()}}
  func receiveEncoded(_ packet:Data){perform{[self] in guard enabled else{return};tx.receive(packet)}}
@@ -103,6 +103,15 @@ final class TransmissionLoop {
  }}
  func receiveNetworkAudio(_ packet:Data){perform{[self] in
   if case .dmr(let settings)=profile {receiveDMRAudio(packet,settings:settings);return}
+  if case .nxdn(let settings)=profile {
+   guard enabled,tx.phase == .idle,let frame=NXDNPackets.receive(packet),frame.destination==settings.destination else{return}
+   reception.received += frame.frames.count
+   let available=Self.maximumReceivedFrames-rx.count
+   rx.append(contentsOf:frame.frames.prefix(available))
+   reception.discarded += max(0,frame.frames.count-available)
+   reception.buffered=rx.count;reception.highWater=max(reception.highWater,rx.count)
+   return
+  }
   guard enabled,tx.phase == .idle,let frame=try? Packets.receive(packet) else{return}
   if frame.fi==0 || frame.source != rxSource {rxSequence=nil;rxSource=frame.source}
   if let previous=rxSequence {
